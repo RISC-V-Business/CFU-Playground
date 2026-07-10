@@ -74,3 +74,12 @@
 [submodule "soc/deps/pythondata_cpu_serv"]
 	path = third_party/python/pythondata_cpu_serv
 	url = https://github.com/litex-hub/pythondata-cpu-serv.git
+[submodule "soc/asic/core/gf180mcu"]
+	path = soc/asic/core/gf180mcu
+	url = https://github.com/efabless/caravel_mgmt_soc_gf180mcu.git
+[submodule "soc/asic/core/sky180"]
+	path = soc/asic/core/sky180
+	url = https://github.com/efabless/caravel_mgmt_soc_litex.git
+[submodule "soc/asic/librelane/gf180mcu-waferspace-plugin"]
+	path = soc/asic/librelane/gf180mcu-waferspace-plugin
+	url = https://github.com/RISC-V-Business/gf180mcu-waferspace-plugin.git

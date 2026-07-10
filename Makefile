@@ -26,6 +26,7 @@ endif
 
 
 include third_party/make-env/conda.mk
+include src/CFU-Playground/soc/asic/librelane/gf180mcu-waferspace-plugin/Makefile
 
 # Example make target which runs commands inside the conda environment.
 test-command: | $(CONDA_ENV_PYTHON)
@@ -74,6 +75,5 @@ env-sf: install-sf
 
 enter-sf:
 	-@export F4PGA_INSTALL_DIR=$(TOP_DIR)/$(SF_INSTALL) && $(MAKE) USE_SYMBIFLOW=1 enter
-
 
 .PHONY: enter-sf env-sf install-sf info

@@ -2397,6 +2397,7 @@ module VexRiscv (
   end
 
   assign IBusSimplePlugin_rspJoin_fetchRsp_rsp_inst = IBusSimplePlugin_rspJoin_rspBuffer_output_payload_inst;
+  assign IBusSimplePlugin_rspJoin_fetchRsp_isRvc = 1'b0;
   assign when_IBusSimplePlugin_l376 = (! IBusSimplePlugin_rspJoin_rspBuffer_output_valid);
   assign IBusSimplePlugin_rspJoin_exceptionDetected = 1'b0;
   assign IBusSimplePlugin_rspJoin_join_valid = (IBusSimplePlugin_iBusRsp_stages_1_output_valid && IBusSimplePlugin_rspJoin_rspBuffer_output_valid);

@@ -25,8 +25,14 @@ ENVIRONMENT_FILE := $(TOP_DIR)/conf/environment.yml
 endif
 
 
+# ASIC subcommands intentionally use a Nix/LibreLane environment instead of
+# the legacy Conda environment.  Keep the two dispatchers isolated so targets
+# such as `env` retain their original meaning for FPGA builds.
+ifneq ($(filter asic cocoTB cocotb asic-%,$(MAKECMDGOALS)),)
+include soc/asic/asic.mk
+else
 include third_party/make-env/conda.mk
-include src/CFU-Playground/soc/asic/librelane/gf180mcu-waferspace-plugin/Makefile
+endif
 
 # Example make target which runs commands inside the conda environment.
 test-command: | $(CONDA_ENV_PYTHON)
